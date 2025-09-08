@@ -12,7 +12,7 @@ namespace Ejercicio_1_Agregacion
         {
         }
 
-        private List<Persona> _personas = new List<Persona>();
+        public List<Persona> _personas = new List<Persona>();
 
         public bool AgregarPersona(Persona nueva)
         {
@@ -55,7 +55,8 @@ namespace Ejercicio_1_Agregacion
             return null; 
         }
 
-        public void EliminarPersona(Persona persona)
+        public void EliminarPersona(Persona persona)//REVISAR ACA _ LLEGA BIEN EL OBJETO EN EL PARAMETRO
+            //REHACER LA LOGICA PARA BORRAr
         {
             foreach(Persona p in _personas)
             {

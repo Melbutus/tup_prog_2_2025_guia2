@@ -19,7 +19,10 @@ namespace Ejercicio_1_Agregacion
 
         public string Describir()
         {
+            int dni = DNI;
+            string nombre = Nombre;
 
+            return $"{nombre} - {dni.ToString()}";
         }
 
     }

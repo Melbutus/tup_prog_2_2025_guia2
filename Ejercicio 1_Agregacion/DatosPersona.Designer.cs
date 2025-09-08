@@ -60,6 +60,7 @@
             this.tbx_dni.Name = "tbx_dni";
             this.tbx_dni.Size = new System.Drawing.Size(136, 20);
             this.tbx_dni.TabIndex = 2;
+            this.tbx_dni.TextChanged += new System.EventHandler(this.tbx_dni_TextChanged);
             // 
             // tbx_nombre
             // 
@@ -67,9 +68,11 @@
             this.tbx_nombre.Name = "tbx_nombre";
             this.tbx_nombre.Size = new System.Drawing.Size(136, 20);
             this.tbx_nombre.TabIndex = 3;
+            this.tbx_nombre.TextChanged += new System.EventHandler(this.tbx_nombre_TextChanged);
             // 
             // btn_cancelar_datos_persona
             // 
+            this.btn_cancelar_datos_persona.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_cancelar_datos_persona.Location = new System.Drawing.Point(225, 115);
             this.btn_cancelar_datos_persona.Name = "btn_cancelar_datos_persona";
             this.btn_cancelar_datos_persona.Size = new System.Drawing.Size(75, 23);
@@ -79,12 +82,14 @@
             // 
             // btn_aceptar_datos_persona
             // 
+            this.btn_aceptar_datos_persona.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_aceptar_datos_persona.Location = new System.Drawing.Point(68, 115);
             this.btn_aceptar_datos_persona.Name = "btn_aceptar_datos_persona";
             this.btn_aceptar_datos_persona.Size = new System.Drawing.Size(75, 23);
             this.btn_aceptar_datos_persona.TabIndex = 5;
             this.btn_aceptar_datos_persona.Text = "Aceptar";
             this.btn_aceptar_datos_persona.UseVisualStyleBackColor = true;
+            this.btn_aceptar_datos_persona.Click += new System.EventHandler(this.btn_aceptar_datos_persona_Click);
             // 
             // DatosPersona
             // 
@@ -108,9 +113,9 @@
 
         private System.Windows.Forms.Label lbl_dni;
         private System.Windows.Forms.Label lbl_nombre;
-        private System.Windows.Forms.TextBox tbx_dni;
-        private System.Windows.Forms.TextBox tbx_nombre;
         private System.Windows.Forms.Button btn_cancelar_datos_persona;
         private System.Windows.Forms.Button btn_aceptar_datos_persona;
+        public System.Windows.Forms.TextBox tbx_dni;
+        public System.Windows.Forms.TextBox tbx_nombre;
     }
 }

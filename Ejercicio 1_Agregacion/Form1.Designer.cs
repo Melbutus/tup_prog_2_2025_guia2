@@ -52,6 +52,7 @@
             this.btn_listar.TabIndex = 1;
             this.btn_listar.Text = "Listar";
             this.btn_listar.UseVisualStyleBackColor = true;
+            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
             // 
             // btn_agregar
             // 
@@ -61,6 +62,7 @@
             this.btn_agregar.TabIndex = 2;
             this.btn_agregar.Text = "Agregar";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // btn_ver
             // 
@@ -70,6 +72,7 @@
             this.btn_ver.TabIndex = 3;
             this.btn_ver.Text = "Ver";
             this.btn_ver.UseVisualStyleBackColor = true;
+            this.btn_ver.Click += new System.EventHandler(this.btn_ver_Click);
             // 
             // btn_modificar
             // 
@@ -88,6 +91,7 @@
             this.btn_eliminar.TabIndex = 5;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // Form1
             // 

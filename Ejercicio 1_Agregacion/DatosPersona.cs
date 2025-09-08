@@ -16,5 +16,20 @@ namespace Ejercicio_1_Agregacion
         {
             InitializeComponent();
         }
+
+        private void tbx_dni_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_aceptar_datos_persona_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbx_nombre_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
