@@ -85,6 +85,7 @@
             // 
             // btn_eliminar
             // 
+            this.btn_eliminar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btn_eliminar.Location = new System.Drawing.Point(411, 243);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(75, 23);

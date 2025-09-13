@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Ejercicio_1_Agregacion
@@ -25,6 +26,7 @@ namespace Ejercicio_1_Agregacion
                 }
                 _personas.Add(nueva);
                 return true;
+              
             }
                 return false;
         }
@@ -37,35 +39,45 @@ namespace Ejercicio_1_Agregacion
 
         public Persona VerPersona(int n)
         {
-            if (_personas.Count > 0) 
-            { 
-            return _personas[n];
+           if (n>0 && n < _personas.Count)
+            {
+                return _personas[n];
             }
-
-            return null;
+           return null;
         }
 
         public Persona VerPersonaPorDNI(int dni)
         {
-            foreach(Persona p in _personas)
+            int idx = -1; // sentinela
+            int n = 0;
+            while (idx == -1 && n < _personas.Count)
             {
-                if (dni==p.DNI)
-                    return p;
+                if (_personas[n].DNI == dni)
+                {
+                    idx = n; // guardo
+                }
+                n++;
             }
-            return null; 
+
+            if (idx > -1)
+                return _personas[idx];
+            else
+                return null;
+        }
+        
+
+        public void EliminarPersona(Persona persona)
+        {
+            Persona encontrada = VerPersonaPorDNI(persona.DNI);
+
+            if (encontrada != null)
+            {
+                _personas.Remove(persona);
+            }
+            
         }
 
-        public void EliminarPersona(Persona persona)//REVISAR ACA _ LLEGA BIEN EL OBJETO EN EL PARAMETRO
-            //REHACER LA LOGICA PARA BORRAr
-        {
-            foreach(Persona p in _personas)
-            {
-                if (p.DNI == persona.DNI) 
-                { 
-                    _personas.Remove(p);
-                }
-            }
-        }
+       
 
     }
 
